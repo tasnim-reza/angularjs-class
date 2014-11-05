@@ -2,9 +2,24 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>AngularJs Basic</title>
+    <script src="jquery-2.1.1.js"></script>
 </head>
 <body>
-
+<div>
+    <form>
+        <label>Username: </label>
+        <input id="username" type="text"/>
+        <input id="submit" type="button" value="Save">
+    </form>
+    <script>
+        $(function(){
+           $('#username').val('Reza');
+            $('#submit').on('click', function(e){
+               console.log($('#username').val());
+            });
+        });
+    </script>
+</div>
 </body>
 </html>
