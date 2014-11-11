@@ -1,0 +1,65 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+<style>
+    .ng-scope{
+        border: 2px solid brown;
+    }
+
+</style>
+</head>
+<body>
+
+<h2>Controller, Service (Class-1)</h2>
+
+<ul>
+    <li>
+        Controller
+    </li>
+    <li>
+        Scope hierarchy
+    </li>
+    <li>
+        Service
+    </li>
+    <li>
+        Factory
+    </li>
+    <li>
+        Value
+    </li>
+    <li>
+        Constant
+    </li>
+    <li>
+        Filter
+    </li>
+    <li>
+        Decorator
+    </li>
+</ul>
+
+    <script src="lib/angular/angular.1.0.5.min.js"></script>
+    <script src="js/app.js"></script>
+
+      <div  ng-controller="ParentController">
+
+         Parent Data value <input ng-model="op.a" /> is {{ op.a }}
+
+          <div style="left: 40px;position: relative;" ng-controller="ChieldController">
+              Chield Data value <input ng-change="changeevnt1()" ng-model="op.a" /> is {{ op.a }}
+          </div>
+
+          <div style="left: 40px;position: relative;" ng-controller="ChieldController">
+              Sibling Data value <input ng-change="changeevnt2()" ng-model="op.a" /> is {{ op.a }}
+          </div>
+         <span>Filter</span>
+          {{ op.a|Double:op.a }}
+
+      </div>
+
+</body>
+</html>
