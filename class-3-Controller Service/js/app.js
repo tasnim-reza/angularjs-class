@@ -76,15 +76,11 @@ angApplication.controller('ParentController', ['Service', 'Factory', 'Value',
     }]);
 
 
-function ChieldController($scope) {
+angApplication.controller('ChieldController', ['Service', 'Factory', 'Value',
+    'DoubleFilter', '$scope', function (Service, Factory, Value, DoubleFilter, $scope) {
 
-    //$scope.changeevnt1 = function () {
-    //    Service.sayHi();
-    //};
-    //$scope.changeevnt2 = function () {
-    //    Factory.sayHi();
-    //};
 
-}
+    }]);
+
 
 
