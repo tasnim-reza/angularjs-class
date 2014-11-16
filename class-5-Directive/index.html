@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>Directive</h2>
+
+<ul>
+    <li>
+        ng-click, ng-show, ng-hide, ng-if, ng-init, ng-repeat
+    </li>
+    <li>
+        Directive defination object
+    </li>
+    <li>
+        $scope hierarchy
+    </li>
+
+
+</ul>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+
+      <div ng-init="showButton=false"  ng-controller="MainCtrl">
+
+          <!--<div ng-if="showButton">-->
+              <!--<input type="button" ng-click="doSomeThing()" value="click"/>-->
+          <!--</div>-->
+
+          <!--<div>-->
+              <!--<ul>-->
+                  <!--<li ng-repeat="record in records">{{record.id}}-{{record.name}}</li>-->
+              <!--</ul>-->
+          <!--</div>-->
+
+          <!--<div>-->
+              <!--Hello <input ng-model='name'> <hr/>-->
+              <!--<span ng-bind="name"></span> <br/>-->
+              <!--<span ng:bind="name"></span> <br/>-->
+              <!--<span ng_bind="name"></span> <br/>-->
+              <!--<span data-ng-bind="name"></span> <br/>-->
+              <!--<span x-ng-bind="name"></span> <br/>-->
+          <!--</div>-->
+
+          <!--<my-dir></my-dir>-->
+          <!--<span my-dir="exp"></span>-->
+          <!--&lt;!&ndash; directive: my-dir exp -->
+          <!--<span class="my-dir: exp;"></span>-->
+
+          <!--<my-custom-directive></my-custom-directive>-->
+
+          <!--<my-custom-directive person-data="rooTperson"></my-custom-directive>-->
+
+          <!--<my-custom-directive isn="name is {{rooTperson.name}}" person-data="rooTperson">-->
+          <!--</my-custom-directive>-->
+
+
+          <my-custom-directive isn="name is {{rooTperson.name}}" person-data="rooTperson">
+             <div> So {{rooTperson.name}} is a {{studentType}}</div>
+
+          </my-custom-directive>
+      </div>
+
+
+
+</body>
+</html>
