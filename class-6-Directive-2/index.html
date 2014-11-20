@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+<h2>Directive</h2>
+
+<ul>
+    <li>
+        DDO(require)
+    </li>
+    <li>
+        DDO(Controller vs Compile vs Pre-link vs Post-link)
+    </li>
+
+
+</ul>
+
+<script src="lib/angular/angular.js"></script>
+<script src="js/app.js"></script>
+
+<div ng-init="showButton=false" ng-controller="MainCtrl">
+
+    <!--<example-directive></example-directive>-->
+    <!--<child-directive example-directive></child-directive>-->
+
+
+    <level-f>
+        <my-custom-directive isn="name is {{rooTperson.name}}" person-data="rooTperson">
+        </my-custom-directive>
+    </level-f>
+
+    <level-r>
+        <level-a>
+            <level-b>
+                <level-c></level-c>
+                <level-d></level-d>
+            </level-b>
+        </level-a>
+        <level-e></level-e>
+        <level-f>
+            <level-g></level-g>
+            <level-h></level-h>
+        </level-f>
+    </level-r>
+
+
+</div>
+
+
+</body>
+</html>
