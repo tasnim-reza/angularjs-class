@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+    <style>
+        /*.ng-scope{*/
+            /*border: 1px solid red;*/
+        /*}*/
+    </style>
+</head>
+<body ng-controller="MainCtrl" ng-cloak>
+
+<h2>Two way binding using ngModelController</h2>
+
+<ul>
+    <li>
+        Two way binding
+    </li>
+    <li ng-init="ngmodelCtrlShow=false" ng-click="ngmodelCtrlShow=!ngmodelCtrlShow">
+        NgModelController
+        <ul ng-click="$event.stopPropagation()" ng-show="ngmodelCtrlShow">
+            <li>$render</li>
+            <li>$viewValue</li>
+            <li>$modelValue</li>
+            <li>$setViewValue()</li>
+            <li>$isEmpty</li>
+            <li>$setPristine()</li>
+            <li>$setDirty()</li>
+            <li>$setUntouched()</li>
+            <li>$setTouched()</li>
+            <li>$setValidity(validationErrorKey, isValid)</li>
+            <li>$rollbackViewValue()</li>
+            <li>$parsers</li>
+            <li>$formatters</li>
+            <li>$validators</li>
+            <li>$asyncValidators</li>
+
+        </ul>
+    </li>
+    <li>Form validation</li>
+
+
+</ul>
+
+<script src="lib/angular/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.js"></script>
+<script src="js/app.js"></script>
+
+<div >
+
+    <form name="myForm">
+        <div contenteditable
+             name="myWidget" ng-model="userContent"
+             strip-br="true"
+             required>Change me!</div>
+        <span ng-show="myForm.myWidget.$error.required">Required!</span>
+        <hr>
+        <textarea ng-model="userContent"></textarea>
+
+
+        <input type="text" name="myInput" ng-model="xyz" strcharlessthanfive/>
+        {{xyz}}
+        <span ng-show="myForm.myInput.$error.strcharlessthanfive">char length grater then four</span>
+
+    </form>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
