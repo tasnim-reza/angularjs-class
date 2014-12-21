@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+    <style>
+
+    </style>
+</head>
+<body ng-controller="RootCtrl" ng-cloak>
+
+<h2>State based routing using angular-ui-router</h2>
+
+<ul>
+
+</ul>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-ui-router.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/State1ListCtrl.js"></script>
+<script src="js/controllers/State2ListCtrl.js"></script>
+<script src="js/controllers/ItemDetailCtrl.js"></script>
+<script src="js/controllers/RootController.js"></script>
+
+
+<div>
+    <a href="#/state1">State 1</a>
+    <a ui-sref="state2">State 2</a>
+
+    <div ui-view>
+
+    </div>
+
+</div>
+
+</body>
+</html>
