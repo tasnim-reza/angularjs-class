@@ -1,8 +1,6 @@
 define(['angular', 'angularUiRouter'], function () {
     var angularApp = angular.module('angularApp', ['ui.router']);
-
-    angularApp.reg = {controller: {} };
-
+    
     angularApp.config(function ($stateProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $urlRouterProvider) {
 
         angularApp.reg =

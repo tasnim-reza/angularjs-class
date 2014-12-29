@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selise school</title>
+
+    <style>
+    </style>
+</head>
+<body ng-controller="RootCtrl" ng-cloak>
+
+    <h2>service call</h2>
+
+    <a href="javascript:void(0)" ng-click="getAllStudents()">Get all $promise</a>
+    <table>
+        <tr ng-repeat="s in students">
+            <td ng-bind="s.Name"></td>
+            <td ng-bind="s.Roll"></td>
+        </tr>
+    </table>
+    <br/>
+    
+    <a href="javascript:void(0)" ng-click="getAllStudents$resouce()">Get all $resource</a>
+    <table>
+        <tr ng-repeat="s in students$resource">
+            <td ng-bind="s.Name"></td>
+            <td ng-bind="s.Roll"></td>
+        </tr>
+    </table>
+    <br />
+    <hr/>
+    
+    <h2>$braodcast and $emit</h2>
+    <div>
+        <a ui-sref="state1">State 1</a>
+        <a href="javascript:void(0)" ng-click="broadcastMessage()">$broadcast</a>
+        <h2 ng-bind="emittedMsg"></h2>
+        <div ui-view></div>
+    </div>
+
+    <script src="lib/require.js" data-main="main"></script>
+
+</body>
+</html>
